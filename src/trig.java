@@ -3,11 +3,11 @@ class trig
 {
     private final double pi = 3.14159265359;
 
-    double sin()
+    double sin(double x)
     {
         double sum = 0;
         int denom;
-        double numrad = (double) 90 * (2 * pi/360);
+        double numrad = x * (2 * pi/360);
         int sign = 1;
         for(int counter = 0; counter < 9; counter++)
         {

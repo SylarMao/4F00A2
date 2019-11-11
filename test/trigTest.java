@@ -7,7 +7,7 @@ class trigTest {
     void sin()
     {
         trig a = new trig();
-        assertEquals(1,a.sin(),1E-10);
+        assertEquals(1,a.sin(90),1E-10);
     }
 
     @Test
