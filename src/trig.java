@@ -29,6 +29,10 @@ class trig
         return sum;
     }
 
+    double tan(double degree)
+    {
+        return sin(degree)/cos(degree);
+    }
 
     double factorial(int i)
     {

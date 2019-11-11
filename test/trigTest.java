@@ -20,6 +20,15 @@ class trigTest {
     }
 
     @Test
+    void tan()
+    {
+        trig a = new trig();
+        double degree = 0;
+        assertEquals(0,a.tan(degree),1E-15);
+    }
+
+
+    @Test
     void factorial()
     {
         trig a = new trig();
