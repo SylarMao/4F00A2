@@ -6,13 +6,11 @@ class trig
     double sin(double degree)
     {
         double sum = 0;
-        int denom;
         double numrad = degree * (2 * pi/360);
         int sign = 1;
         for(int counter = 0; counter < 11; counter++)
         {
-            denom = counter * 2 + 1;
-            sum += sign * pow(numrad,denom)/factorial(denom);
+            sum += sign * pow(numrad,counter * 2 + 1)/factorial(counter * 2 + 1);
             sign *= -1;
         }
         return sum;
@@ -21,15 +19,12 @@ class trig
     double cos(double degree)
     {
         double sum = 1;
-        int denom;
         double numrad = degree * (2 * pi/360);
         int sign = -1;
         for(int counter = 1; counter < 11; counter++)
         {
-            denom = counter * 2 ;
-            sum += sign * pow(numrad,denom)/factorial(denom);
+            sum += sign * pow(numrad,counter*2)/factorial(counter*2);
             sign *= -1;
-            System.out.println(sum);
         }
         return sum;
     }
