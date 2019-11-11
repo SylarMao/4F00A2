@@ -1,8 +1,8 @@
-public class trig
+class trig
 {
     final double pi = 3.14159265359;
 
-    public double sin(double x)
+    double sin(double x)
     {
         double sum = 0;
         int denom;
@@ -18,7 +18,7 @@ public class trig
     }
 
 
-    public double factorial(int i)
+    double factorial(int i)
     {
         double factorial = i;
         for(i=i;i>1;i--)
@@ -28,7 +28,7 @@ public class trig
         return factorial;
     }
 
-    public double pow(double i,long j)
+    double pow(double i,long j)
     {
         double k=i;
         for(j=j;j>1;j--)
