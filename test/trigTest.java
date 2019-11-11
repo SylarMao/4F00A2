@@ -7,7 +7,16 @@ class trigTest {
     void sin()
     {
         trig a = new trig();
-        assertEquals(1,a.sin(90),1E-10);
+        double degree=90;
+        assertEquals(1,a.sin(degree),1E-15);
+    }
+
+    @Test
+    void cos()
+    {
+        trig a = new trig();
+        double degree=90;
+        assertEquals(0,a.cos(degree),1E-15);
     }
 
     @Test

@@ -1,19 +1,35 @@
 
 class trig
 {
-    private final double pi = 3.14159265359;
+    private final double pi = 3.141592653589793;
 
-    double sin(double x)
+    double sin(double degree)
     {
         double sum = 0;
         int denom;
-        double numrad = x * (2 * pi/360);
+        double numrad = degree * (2 * pi/360);
         int sign = 1;
-        for(int counter = 0; counter < 9; counter++)
+        for(int counter = 0; counter < 11; counter++)
         {
             denom = counter * 2 + 1;
             sum += sign * pow(numrad,denom)/factorial(denom);
             sign *= -1;
+        }
+        return sum;
+    }
+
+    double cos(double degree)
+    {
+        double sum = 1;
+        int denom;
+        double numrad = degree * (2 * pi/360);
+        int sign = -1;
+        for(int counter = 1; counter < 11; counter++)
+        {
+            denom = counter * 2 ;
+            sum += sign * pow(numrad,denom)/factorial(denom);
+            sign *= -1;
+            System.out.println(sum);
         }
         return sum;
     }
