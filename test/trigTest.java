@@ -32,7 +32,24 @@ class trigTest {
     {
         trig a = new trig();
         double degree = 0.5;
-        assertEquals(30,a.arcsin(degree),1E-15);
+        assertEquals(30,a.arcsin(degree),0.001);
+    }
+
+    @Test
+    void arccos()
+    {
+        trig a = new trig();
+        double degree = 0.5;
+        assertEquals(1.04720,a.arccos(degree),0.001);
+    }
+
+    @Test
+    void arctan()
+    {
+        trig a = new trig();
+        double degree = -12;
+        assertEquals(-1.48765509,a.arctan(degree),0.001);
+
     }
 
     @Test
