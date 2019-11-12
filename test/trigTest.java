@@ -27,6 +27,13 @@ class trigTest {
         assertEquals(0,a.tan(degree),1E-15);
     }
 
+    @Test
+    void arcsin()
+    {
+        trig a = new trig();
+        double degree = 0.5;
+        assertEquals(30,a.arcsin(degree),1E-15);
+    }
 
     @Test
     void factorial()

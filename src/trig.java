@@ -34,6 +34,26 @@ class trig
         return sin(degree)/cos(degree);
     }
 
+    double arcsin(double sin)
+    {
+        double sum = sin;
+        double ans;
+        for(int counter=1;counter<80;counter++)
+        {
+            ans=factorial(2*counter)*pow(sin,2*counter+1)/(pow(2,2*counter)*factorial(counter)*factorial(counter)*(2*counter+1));
+            sum+=ans;
+        }
+        return sum / (2 * pi/360);
+    }
+
+
+    double abs(double num)
+    {
+        if (num<0)
+            return -num;
+        return num;
+    }
+
     double factorial(int i)
     {
         double factorial = i;
