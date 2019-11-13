@@ -53,12 +53,49 @@ class trigTest {
     }
 
     @Test
+    void sec()
+    {
+        trig a = new trig();
+        double degree = -12;
+        assertEquals(-1.48765509,a.sec(degree),0.001);
+
+    }
+
+    @Test
+    void csc()
+    {
+        trig a = new trig();
+        double degree = -12;
+        assertEquals(-1.48765509,a.csc(degree),0.001);
+
+    }
+
+    @Test
+    void cot()
+    {
+        trig a = new trig();
+        double degree = -12;
+        assertEquals(-1.48765509,a.cot(degree),0.001);
+
+    }
+
+    @Test
+    void abs()
+    {
+        trig a = new trig();
+        int i = -5;
+        assertEquals(-i,a.abs(i),0);
+    }
+
+    @Test
     void factorial()
     {
         trig a = new trig();
         double i = a.factorial(5);
         assertEquals(5 * 4 * 3 * 2,i,0);
     }
+
+
 
     @Test
     void pow()

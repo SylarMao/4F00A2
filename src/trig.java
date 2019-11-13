@@ -78,14 +78,29 @@ class trig
         }
     }
 
-    double abs(double num)
+    double sec(double degree)
+    {
+        return 1/cos(degree);
+    }
+
+    double csc(double degree)
+    {
+        return 1/sin(degree);
+    }
+
+    double cot(double degree)
+    {
+        return 1/tan(degree);
+    }
+
+    public double abs(double num)
     {
         if (num<0)
             return -num;
         return num;
     }
 
-    double factorial(int i)
+    public double factorial(int i)
     {
         double factorial = i;
         for(; i>1; i--)
@@ -95,7 +110,7 @@ class trig
         return factorial;
     }
 
-    double pow(double i,long j)
+    public double pow(double i,long j)
     {
         double k=i;
         for(; j>1; j--)
