@@ -1,4 +1,4 @@
-public class invalidInputException extends Exception
+class invalidInputException extends Exception
 {
     invalidInputException(String message)
     {
