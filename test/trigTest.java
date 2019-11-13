@@ -20,15 +20,15 @@ class trigTest {
     }
 
     @Test
-    void tan()
+    void tan() throws invalidInputException
     {
         trig a = new trig();
-        double degree = 0;
+        double degree = 90;
         assertEquals(0,a.tan(degree),1E-15);
     }
 
     @Test
-    void arcsin()
+    void arcsin() throws invalidInputException
     {
         trig a = new trig();
         double degree = 0.5;
@@ -36,7 +36,7 @@ class trigTest {
     }
 
     @Test
-    void arccos()
+    void arccos() throws invalidInputException
     {
         trig a = new trig();
         double degree = 0.5;
@@ -53,7 +53,7 @@ class trigTest {
     }
 
     @Test
-    void sec()
+    void sec() throws invalidInputException
     {
         trig a = new trig();
         double degree = -12;
@@ -62,7 +62,7 @@ class trigTest {
     }
 
     @Test
-    void csc()
+    void csc() throws invalidInputException
     {
         trig a = new trig();
         double degree = -12;
@@ -71,7 +71,7 @@ class trigTest {
     }
 
     @Test
-    void cot()
+    void cot() throws   invalidInputException
     {
         trig a = new trig();
         double degree = -12;

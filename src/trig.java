@@ -29,13 +29,21 @@ class trig
         return sum;
     }
 
-    double tan(double degree)
+    double tan(double degree)throws invalidInputException
     {
+        if(cos(degree)<1E-15)
+        {
+            throw new invalidInputException("Invalid input\nCan not tan 90 degree or 270 degree");
+        }
         return sin(degree)/cos(degree);
     }
 
-    double arcsin(double sin)
+    double arcsin(double sin) throws invalidInputException
     {
+        if(abs(sin)>1)
+        {
+            throw new invalidInputException("Invalid input\nRange of arcsin is |x|<1");
+        }
         double sum = sin;
         for(int counter=1;counter<80;counter++)
         {
@@ -44,8 +52,12 @@ class trig
         return sum;
     }
 
-    double arccos(double cos)
+    double arccos(double cos) throws invalidInputException
     {
+        if(abs(cos)>1)
+        {
+            throw new invalidInputException("Invalid input\nRange of arccos is |x|<1");
+        }
         return pi/2-arcsin(cos);
     }
 
@@ -71,36 +83,44 @@ class trig
             int sign = -1;
             for(int counter = 0; counter < 13; counter++)
             {
-                sum += sign * 1/((2*counter+1)*pow(tan,2*counter+1));
+                sum += sign /((2*counter+1)*pow(tan,2*counter+1));
                 sign *= -1;
             }
             return sum;
         }
     }
 
-    double sec(double degree)
+    double sec(double degree) throws invalidInputException
     {
+        if(cos(degree)<1E-15)
+        {
+            throw new invalidInputException("Invalid input\nCan not sce 90 degree or 270 degree");
+        }
         return 1/cos(degree);
     }
 
-    double csc(double degree)
+    double csc(double degree) throws invalidInputException
     {
+        if(degree%180==0)
+        {
+            throw new invalidInputException("Invalid input\nCan not sce 180 degree or 360 degree");
+        }
         return 1/sin(degree);
     }
 
-    double cot(double degree)
+    double cot(double degree) throws invalidInputException
     {
         return 1/tan(degree);
     }
 
-    public double abs(double num)
+    double abs(double num)
     {
         if (num<0)
             return -num;
         return num;
     }
 
-    public double factorial(int i)
+    double factorial(int i)
     {
         double factorial = i;
         for(; i>1; i--)
@@ -110,7 +130,7 @@ class trig
         return factorial;
     }
 
-    public double pow(double i,long j)
+    double pow(double i,long j)
     {
         double k=i;
         for(; j>1; j--)
